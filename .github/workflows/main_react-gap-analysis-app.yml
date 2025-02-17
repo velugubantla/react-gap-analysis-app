@@ -24,9 +24,14 @@ jobs:
           node-version: '18.x'
 
       - name: npm install, build, and test
+
         run: |
           npm install
-          npm run build --if-present
+          npm run build
+          npx azure-webapps-deploy
+      
+
+         
           npm run test --if-present
 
       - name: Zip artifact for deployment
