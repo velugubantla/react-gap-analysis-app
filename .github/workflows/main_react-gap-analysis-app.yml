@@ -24,7 +24,8 @@ jobs:
           node-version: '18.x'
 
       - name: npm install, build, and test
-    nv:      NODE_OP  TIONS: --openssl-legacy-provider
+      env:
+  E_OP    TIONS: --openssl-legacy-provider
         run: |
           npm install
           npm run build
